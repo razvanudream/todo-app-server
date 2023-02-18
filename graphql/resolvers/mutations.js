@@ -16,6 +16,16 @@ module.exports = {
     }
   },
 
+  deleteTodo: async ({ id }) => {
+    try {
+      const deletedItem = await items.destroy({ where: { id: id } });
+
+      return deletedItem === 1;
+    } catch (err) {
+      // handle error
+    }
+  },
+
   markTodoCompleted: async ({ id }) => {
     try {
       const updateItem = await items.update(

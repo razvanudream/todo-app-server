@@ -34,6 +34,7 @@ module.exports = buildSchema(`
     createTodo(title: String!, userId: Int!): Todo
     markTodoUncompleted(id: Int!): UpdatedTodo
     markTodoCompleted(id: Int!): UpdatedTodo
+    deleteTodo(id: Int!): Boolean
   }
 
   schema {
