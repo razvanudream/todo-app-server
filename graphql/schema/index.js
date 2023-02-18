@@ -19,7 +19,6 @@ module.exports = buildSchema(`
     id: Int
     name: String
     email: String
-    password: String
     createdAt: String
     updatedAt: String
   }
